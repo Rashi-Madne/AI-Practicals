@@ -12,6 +12,7 @@ def fill_jug1():
 def fill_jug2():
     global y
     y=jug2
+    print
     print(x,y)
 
 def empty_jug1():
@@ -21,6 +22,7 @@ def empty_jug1():
 
 def empty_jug2():
     global y
+    y=0
     print(x,y)
 
 def pour_jug1_into_jug2():
@@ -33,17 +35,16 @@ def pour_jug1_into_jug2():
 def pour_jug2_into_jug1():
     global x,y
     amount=min(y,jug1-x)
-    y=y-amount
     x=x+amount
+    y=y-amount
     print(x,y)
 
-print("initial state ",(x,y))
+print("initial states",(x,y))
 
 fill_jug1()
-fill_jug2()
 pour_jug1_into_jug2()
-pour_jug2_into_jug1()
-empty_jug1()
 empty_jug2()
+fill_jug1()
+pour_jug1_into_jug2()
 
 print("goal state",(x,y))

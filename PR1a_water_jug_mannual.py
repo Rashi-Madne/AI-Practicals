@@ -1,5 +1,5 @@
-jug1=4
-jug2=3
+jug1=int(input("enter capacity of jug1: "))
+jug2=int(input("enter capacity of jug2: "))
 
 jug=int(input("jug with goal amount(1/2): "))
 amt=int(input("goal amount: "))
@@ -51,7 +51,7 @@ while True:
 
     print("current state : ",(x,y))
 
-    if  (jug==1 and x==amt) or (jug==2 or y==amt):
+    if  (jug==1 and x==amt) or (jug==2 and y==amt):
         print("goal reached")
         break
 
